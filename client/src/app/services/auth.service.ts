@@ -122,6 +122,37 @@ export class AuthService {
             );
     }
 
+    registerEstudiante(
+        id: string,
+        LastName: string,
+        Name: string,
+        email: string,
+    ) {
+        const url_api = 'http://localhost:3000/api/app-user-tbs';
+        const modal = {} as ResponseInterface;
+        return this.htttp.post<any>(url_api,
+            {
+                id: id,
+                LastName: LastName,
+                Name: Name,
+                email: email
+            }, { headers: this.headers })
+            .pipe(map((res: Response) => console.log("en json : " + res.json())),
+                catchError((error: any) => {
+
+                    modal.Status = error.status;
+                    modal.IsError = true;
+                    modal.Messages = error.error.error.details.messages;
+                    if (error.status == 422) {
+                        modal.Message = "Data duplication error";
+                    } else if (error.status == 500) {
+                        modal.Message = "Internal server error ";
+                    }
+
+                    return of(modal);
+                }));
+    }
+
 
     /*this.user.lastName,this.user.name,this.user.isMilitar,this.user.isTemporal
     /,this.user.username,this.user.email,this.user.password*/

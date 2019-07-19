@@ -5,6 +5,7 @@ import { LoginUserComponent } from 'src/app/components/user/login/login.componen
 import { CategoriaComponent } from 'src/app/components/categoria/categoria.component';
 import { CategoriaEditComponent } from 'src/app/components/categoria/edit/categoria.edit.component';
 import { CategoriaListComponent } from 'src/app/components/categoria/list/categoria.list.component';
+import { EstudianteComponent } from 'src/app/components/estudiante/estudiante.component';
 import { CursoComponent } from 'src/app/components/curso/curso.component';
 import { SelectorComponent } from 'src/app/components/selectorCountry/selector.component';
 import { UserListComponent } from 'src/app/components/user/list/list.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
     { path: 'user/curso', component: CursoComponent },
     { path: 'user/categorialist', component: CategoriaListComponent },
     { path: 'user/categoriaedit', component: CategoriaEditComponent },
+    { path: 'user/estudiante', component: EstudianteComponent },
     
     
     { path: '**', component: Page404Component }

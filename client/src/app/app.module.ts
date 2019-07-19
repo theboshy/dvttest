@@ -24,6 +24,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { SelectorDocumentComponent } from 'src/app/components/selectorDocument/selectorDocument.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EstudianteComponent } from 'src/app/components/estudiante/estudiante.component';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { AlertsModule } from 'angular-alert-module';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
@@ -48,6 +49,7 @@ import { DatePipe } from '@angular/common';
         CategoriaComponent,
         CategoriaListComponent,
         CategoriaEditComponent,
+        EstudianteComponent
         TruncateTextPipe
     ],
     imports: [AlertsModule.forRoot(), ReactiveFormsModule, BrowserAnimationsModule,
