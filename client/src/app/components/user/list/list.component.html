@@ -1,0 +1,33 @@
+<table id="example" class="table table-striped table-bordered mt-4" style="width:100%">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>it's military</th>
+            <th class="separateCOuntry">Country</th>
+            <th class="separateCOuntry">City</th>
+            <th class="separateCOuntry">Address</th>
+            <th class="separateCOuntry">Cell Phone</th>
+            <th class="separateDoc" >Document Name</th>
+            <th class="separateDoc" >Document</th>
+            <th class="separateDoc" >PLace Of Expedition</th>
+            <th class="separateDoc" >Date Of Expedition</th>
+        </tr>
+    </thead>
+    <tbody [(ngModel)]="users">
+        <tr *ngFor="let usr of users">
+            <td>{{usr.Name}}</td>
+            <td>{{usr.LastName}}</td>
+            <td>{{usr.email}}</td>
+            <td>{{usr.isMilitar}}</td>
+            <td class="separateCOuntry">{{usr.CountryName}}</td>
+            <td class="separateCOuntry">{{usr.City}}</td>
+            <td class="separateCOuntry">{{usr.Address}}</td>
+            <td class="separateCOuntry">{{usr.CellPhone}}</td>
+            <td class="separateDoc">{{usr.NameTypedDocument}}</td>
+            <td class="separateDoc">{{usr.Document}}</td>
+            <td class="separateDoc">{{usr.PlaceExpedition}}</td>
+            <td class="separateDoc">{{usr.DateExpedition}}</td>
+        </tr>
+</table>

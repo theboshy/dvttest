@@ -1,0 +1,15 @@
+
+    <form #formDocument="ngForm" (ngChange)="onRegisterFormChange(formDocument)">
+
+            <div class="form-group" dropdown>
+                <select [(ngModel)]="documents[0]" #idCategoria="ngModel" name="namedocument" required
+                    [(ngModel)]="user.idCategoria" id="dropdown-basic-docu"
+                    class="browser-default custom-select" (ngModelChange)="onChange($event)">
+                    <!--revelar el id de un registro de la base datos??-->
+                    <option *ngFor="let dc of documents" id={{dc.idCategoria}} value={{dc.idCategoria}} >{{dc.nombre}}</option>
+                </select>
+            </div>
+
+
+    </form>
+

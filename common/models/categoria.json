@@ -1,0 +1,32 @@
+{
+  "name": "categoria",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "idCategoria": {
+      "type": "number",
+      "id" :  true,
+      "required": true
+    },
+    "nombre": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "curso_categoria": {
+      "type": "hasMany",
+      "model": "curso",
+      "foreignKey": "categoria_idcategoria",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

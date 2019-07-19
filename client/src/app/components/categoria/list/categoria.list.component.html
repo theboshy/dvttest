@@ -1,0 +1,12 @@
+<table id="example" class="table table-striped table-bordered mt-4" style="width:100%">
+    <thead>
+        <tr>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody [(ngModel)]="categorias" name="categorias" ngDefaultControl>
+        <tr *ngFor="let usr of categorias">
+            <td><a href="/user/categoriaedit?id={{usr.idCategoria}}">{{usr.nombre}}</a></td>
+           
+        </tr>
+</table>

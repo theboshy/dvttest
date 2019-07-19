@@ -1,0 +1,34 @@
+{
+  "name": "estudiante",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "idEstudiante": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "apellido": {
+      "type": "string",
+      "required": true
+    },
+    "correo": {
+      "type": "string",
+      "required": true
+    },
+    "foto": {
+      "type": "buffer"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

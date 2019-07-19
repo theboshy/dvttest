@@ -1,0 +1,12 @@
+{
+  "db": {
+    "host": "remotemysql.com",
+    "port": 3306,
+    "url": "mysql://Ki9kqrIPRI:YQXHYLvM74@remotemysql.com/Ki9kqrIPRI",
+    "database": "Ki9kqrIPRI",
+    "password": "YQXHYLvM74",
+    "name": "db",
+    "user": "Ki9kqrIPRI",
+    "connector": "mysql"
+  }
+}
