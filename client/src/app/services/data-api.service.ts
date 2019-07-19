@@ -27,14 +27,14 @@ export class DataApiService {
         return this.htttp.get(url_api);
     }
 
-    getUsers() {
-        const url_api = `http://localhost:3000/api/app-user-tbs`;
+    getCursos() {
+        const url_api = `http://localhost:3000/api/cursos`;
         return this.htttp.get(url_api);
     }
 
 
-    getDocumentInfo() {
-        const url_api = `http://localhost:3000/api/user-document-tbs`;
+    getCorreos() {
+        const url_api = `http://localhost:3000/api/estudiantes`;
         return this.htttp.get(url_api);
     }
     getContacInfo() {

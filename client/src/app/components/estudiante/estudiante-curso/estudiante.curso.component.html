@@ -1,0 +1,51 @@
+<div>
+   
+            <form #formRegister="ngForm" (ngSubmit)="onRegister(formRegister)">
+                <section id="register" class="mb-5 mt-2 ml-0">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-xs-12 col-sm-6 mt-0 ml-0">
+
+
+                                <div class="card_register">
+
+
+                                    <div class="card-body text-center">
+
+
+
+                                        <div class="form-group" dropdown>
+                                            <select [(ngModel)]="cursos[0]" #idCategoria="ngModel" name="namedocument" required
+                                                    [(ngModel)]="user.idCategoria" id="dropdown-basic-docu"
+                                                    class="browser-default custom-select">
+                                                <!--revelar el id de un registro de la base datos??-->
+                                                <option *ngFor="let dc of cursos" id={{dc.idCurso}} value={{dc.idCurso}}>{{dc.nombre}}</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group" dropdown>
+                                            <select [(ngModel)]="correos[0]" #idEstudiante="ngModel" name="namedocument" required
+                                                    [(ngModel)]="estudiante.idEstudiante" id="dropdown-basic-docu"
+                                                    class="browser-default custom-select">
+                                                <option *ngFor="let dc of correos" id={{dc.idEstudiante}} value={{dc.idEstudiante}}>{{dc.correo}}</option>
+                                            </select>
+                                        </div>
+
+
+                                        <button type="submit" [disabled]="formRegister.form.invalid"
+                                                class="btn btn-lg btn-primary btn-block mt-2">
+                                            Asignar Curso
+                                        </button>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </form>
+       
+</div>

@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
 import { DataApiService } from 'src/app/services/data-api.service';
 import { TruncateTextPipe } from './pipes/truncate-text.pipe';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { EstudianteCursoComponent } from 'src/app/components/estudiante/estudiante-curso/estudiante.curso.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { SelectorDocumentComponent } from 'src/app/components/selectorDocument/selectorDocument.component';
@@ -49,7 +50,8 @@ import { DatePipe } from '@angular/common';
         CategoriaComponent,
         CategoriaListComponent,
         CategoriaEditComponent,
-        EstudianteComponent
+        EstudianteCursoComponent,
+        EstudianteComponent,
         TruncateTextPipe
     ],
     imports: [AlertsModule.forRoot(), ReactiveFormsModule, BrowserAnimationsModule,

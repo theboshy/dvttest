@@ -8,6 +8,8 @@ import { CategoriaListComponent } from 'src/app/components/categoria/list/catego
 import { EstudianteComponent } from 'src/app/components/estudiante/estudiante.component';
 import { CursoComponent } from 'src/app/components/curso/curso.component';
 import { SelectorComponent } from 'src/app/components/selectorCountry/selector.component';
+import { EstudianteCursoComponent } from 'src/app/components/estudiante/estudiante-curso/estudiante.curso.component';
+
 import { UserListComponent } from 'src/app/components/user/list/list.component';
 import { SelectorDocumentComponent } from 'src/app/components/selectorDocument/selectorDocument.component';
 import { Page404Component } from 'src/app/components/page404/page404.component';
@@ -28,6 +30,7 @@ const routes: Routes = [
     { path: 'user/categorialist', component: CategoriaListComponent },
     { path: 'user/categoriaedit', component: CategoriaEditComponent },
     { path: 'user/estudiante', component: EstudianteComponent },
+    { path: 'user/estudiantecurso', component: EstudianteCursoComponent },
     
     
     { path: '**', component: Page404Component }
