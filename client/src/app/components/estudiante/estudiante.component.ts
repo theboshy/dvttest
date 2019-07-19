@@ -79,7 +79,7 @@ export class EstudianteComponent implements OnInit {
         if (form.valid) {
 
             let userId = new Date().getUTCMilliseconds().toString();
-
+            console.log(this.user)
             this.authService.registerEstudiante(userId, this.user.LastName,this.user.Name,  this.user.email).subscribe(                                                                                                                                                          
                 
                 (errr: any) => {

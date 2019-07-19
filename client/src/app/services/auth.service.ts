@@ -128,14 +128,14 @@ export class AuthService {
         Name: string,
         email: string,
     ) {
-        const url_api = 'http://localhost:3000/api/app-user-tbs';
+        const url_api = 'http://localhost:3000/api/estudiantes';
         const modal = {} as ResponseInterface;
         return this.htttp.post<any>(url_api,
             {
-                id: id,
-                LastName: LastName,
-                Name: Name,
-                email: email
+                idEstudiante: id,
+                apellido: LastName,
+                nombre: Name,
+                correo: email
             }, { headers: this.headers })
             .pipe(map((res: Response) => console.log("en json : " + res.json())),
                 catchError((error: any) => {
@@ -145,9 +145,11 @@ export class AuthService {
                     modal.Messages = error.error.error.details.messages;
                     if (error.status == 422) {
                         modal.Message = "Data duplication error";
+                       
                     } else if (error.status == 500) {
                         modal.Message = "Internal server error ";
                     }
+                    console.log(error)
 
                     return of(modal);
                 }));
